@@ -1,0 +1,223 @@
+:root{
+    --primaryColor:#0d1117;
+    --secondaryColor:#161b22;
+    --textColor:white;
+    --linkhoverColor:#2b333d;
+    --navbarText:whitesmoke;
+}
+
+
+html,body{
+    transition: all 0.2s;
+    background-color: var(--primaryColor);
+    font-family: cursive;
+    padding:0;
+    margin:0;
+}
+/*Navbar css*/
+.brand-login{
+    display: flex;
+    justify-content: space-between;
+}
+ .loginlogout{
+     color:#fff;
+     font-size: larger;
+     text-decoration: none;
+     padding: 25px;
+ }
+
+ .loginlogout:hover{
+     background-color: var(--linkhoverColor);
+ }
+
+.navbar {
+    min-height: 60px;
+    background-color: var(--secondaryColor);
+    color: white;
+    display: block;
+    margin-bottom: 12px;
+    box-shadow: 1px 1px 3px 1.2px #bcbcbc;
+}
+
+#logo a{
+    color:#fff;
+}
+
+.navbar-navigation{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-navigation > a{
+    text-decoration: none;
+    font-size: large;
+    color: var(--navbarText);
+    padding:14px 16px;
+    width: 100%;
+    border-top: 0.5px solid var(--linkhoverColor);
+
+    text-align: center;
+}
+
+.navbar-navigation >a:hover{
+    transition: all 1s;
+    background-color: var(--linkhoverColor);
+    box-shadow: 1px 1px 3px 1.3px #999999;
+}
+
+/*Navigation bar*/
+
+ /*Login page*/
+
+ .login{
+    transition: color 1s;
+    margin:auto;
+     min-height: 35vh;
+     width: 80%;
+     background-color: var(--textColor);
+     color:var(--navbarText);
+     
+ }
+.notes{
+    transition: all 1s;
+    width: 50%;
+    min-height: 80vh;
+   /* background-color: var(--textColor);*/
+    color: var(--textColor);
+    margin:auto;
+}
+
+/*login page end*/
+
+/*tasks*/
+.tasks{
+    transition: all 1s;
+    background-color: var(--primaryColor);
+    color:var(--textColor);
+    box-shadow: 0px 0px 0px 1.2px #bcbcbc;
+    border-radius: 20px;
+}
+.title{
+    padding-top: 14px;
+    padding-left: 14px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.description{
+    font-size: large;
+    margin-bottom: 0;
+    padding:2px;
+    padding-left: 10px;
+}
+
+.task-actions{
+    transition: all 1s;
+    padding: 5px;
+    display: flex;
+    justify-content: end;
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    border-radius: 0px 0px 20px 20px;
+}
+.task-actions button{
+    transition: all 0.5s;
+    background-color: var(--linkhoverColor); /* Green */
+  border: none;
+  color: white;
+  padding: 10px 27px;
+  border-radius: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: 1px solid #2b333d;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.task-actions button:hover{
+    border: 1px solid #bcbcbc;
+}
+
+.actions{
+    font-size: large;
+    margin: 5px;
+
+}
+/*tasks end*/
+
+
+.createtasks{
+    transition: all 0.5s;
+    background-color: var(--secondaryColor);
+    color:var(--navbarText);
+    min-height: 25vh;
+    margin:auto;
+    /*margin-top: 100px;*/
+    border-radius: 20px;
+    padding:5px;
+}
+
+.createtasks > form {
+    padding: 30px;
+    display: grid;
+}
+
+.createtasks form > input{
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+footer{
+    background-color: var(--secondaryColor);
+    position: absolute;
+    margin-top: 12px;
+    width: 100%;
+    text-align: center;
+}
+
+/*Welcome screen */
+.introduction table{
+    font-family: Arial,sans-serif;
+    border-collapse: collapse;
+    width: fit-content;
+}
+
+td,th{
+    border: 1px solid #dddd;
+    text-align: center;
+    padding: 8px;
+}
+td:nth-child(even) {
+    color:white;
+    background-color: #161b22;
+}
+/*Welcome screen end*/
+#light{
+    background-image: url(./lightmode.svg);
+    width: 28px;
+    margin: auto;
+    background-repeat: no-repeat;
+    padding-bottom: 25px;
+    transition: color 1s;
+    color:white;
+}
+/*Media queries*/
+@media only screen and (max-width:600px){
+    .notes{
+        min-height: 65vh;
+        width:96%;
+    }
+
+    .tasks{
+        min-height: max-content;
+        display: block;
+    }
+    table{
+        display: table-caption;
+        font-size: 15px;
+    }
+}
